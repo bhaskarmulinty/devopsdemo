@@ -21,5 +21,11 @@ pipeline {
                 sh ('terraform ${action} --auto-approve') 
            }
         }
+        stage (" Final Stage") {
+            steps {
+                echo "Successfully deployes EC2 on eu-west-2"
+                
+           }
+        }
     }
 }
