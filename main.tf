@@ -1,10 +1,7 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "3.74.0"
-    }
-  }
+provider "aws" {
+access_key = "AKIA2ZAFKZXTNHQCFDEJ"
+secret_key = "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"
+
 }
 
 resource "aws_instance" "instance" {
