@@ -1,8 +1,8 @@
-# variable "region" {
-#   description = "The AWS region"
-#   type        = string
-#   default     = "ap-south-1"
-# }
+variable "region" {
+   description = "The AWS region"
+   type        = string
+   default     = "us-west-1"
+ }
 
 
 variable "instance-ami" {
