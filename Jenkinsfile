@@ -3,27 +3,27 @@ pipeline {
 
     stages {
          
-        stage ("terraform init") {
+        stage ("Voting App Image Build") {
             steps {
-                sh ("terraform init ") 
+                sh ("docker build . -t voting-app ") 
             }
         }
         
-        stage ("plan") {
+        stage ("Worker App Image Build") {
             steps {
-                sh ('terraform plan') 
+                sh ('docker build . -t worker-app') 
             }
         }
 
-        stage (" Action") {
+        stage (" result app Image Build") {
             steps {
-                echo "Terraform action is --> ${action}"
-                sh ('terraform ${action} --auto-approve') 
+                
+                sh ('docker build . -t result-app') 
            }
         }
-        stage (" Final Stage") {
+        stage (" images build status") {
             steps {
-                echo "Successfully deployes EC2 on eu-west-2"
+                echo "Successfully "
                 
            }
         }
